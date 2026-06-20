@@ -20,19 +20,19 @@ $$\delta^* = \arg\max_{\Vert{}\delta\Vert{}_\infty \le \varepsilon} \text{MSE}\b
 The adversarial image is then clipped to the valid pixel range:
 
 $$
-x_{\text{adv}} = \operatorname{clip}_{[0,1]}(x+\delta^\*)
+x_{\text{adv}} = \text{clip}_{[0,1]}(x+\delta^\*)
 $$
 
 ## PGD update rule
 
 At iteration $t$, PGD performs a gradient step and then projects back into the allowed $\varepsilon$-ball:
 
-$$x_{t+1} = \Pi_{B_\infty(x,\varepsilon)} \left( x_t - \alpha \cdot \operatorname{sign}\left(\nabla_{x_t} \mathcal{L}(x_t)\right) \right)$$ 
+$$x_{t+1} = \Pi_{B_\infty(x,\varepsilon)} \left( x_t - \alpha \cdot \text{sign}\left(\nabla_{x_t} \mathcal{L}(x_t)\right) \right)$$ 
 
 The loss is MSE with a minus
 
 $$
-\mathcal{L}(x_t) = -\operatorname{MSE}\bigl(C(x), C(x_t)\bigr)
+\mathcal{L}(x_t) = -\text{MSE}\bigl(C(x), C(x_t)\bigr)
 $$
 
 so that gradient descent on $\mathcal{L}$ becomes gradient ascent on the codec mismatch.
