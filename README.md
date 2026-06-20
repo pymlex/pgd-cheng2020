@@ -89,7 +89,7 @@ The noise map shows where the perturbation concentrates. The strongest changes c
 
 ![Metrics](metrics_plots.png)
 
-The metric curves show the attack dynamics as the number of PGD iterations grows. MSE increases with more steps, PSNR decreases accordingly, and BPP rises. Convergence means that attack abilities are limited by the size of the \(\epsilon \) sphere.
+The metric curves show the attack dynamics as the number of PGD iterations grows. MSE increases with more steps, PSNR decreases accordingly, and BPP rises. Convergence means that attack abilities are limited by the size of the $\epsilon$ sphere.
 
 ## References
 
