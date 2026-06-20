@@ -15,10 +15,7 @@ Let:
 
 The goal of the attack is to maximize the discrepancy between the codec outputs for the clean and perturbed inputs:
 
-$$
-\delta^\* = \arg\max_{\|\delta\|_\infty \le \varepsilon}
-\operatorname{MSE}\bigl(C(x), C(x+\delta)\bigr)
-$$
+$$\delta^* = \arg\max_{\Vert{}\delta\Vert{}_\infty \le \varepsilon} \text{MSE}\bigl(C(x), C(x+\delta)\bigr)$$ 
 
 The adversarial image is then clipped to the valid pixel range:
 
